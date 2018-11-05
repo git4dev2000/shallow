@@ -1,0 +1,45 @@
+package org.grl.shallow
+import org.apache.spark.sql.{SparkSession, Dataset}
+import org.apache.spark.sql.types.StructType
+import org.apache.spark.sql.types.StructField
+import org.spark_project.dmg.pmml.DataType
+import org.apache.spark.sql.types.DataTypes
+import org.apache.spark.sql.types.DateType
+
+object DT {
+  def main(args: Array[String]):Unit = {
+    val spark = SparkSession.builder()
+      .appName("DecisionTree")
+      .master("local[*]")
+      .getOrCreate()
+  
+  import spark.implicits._
+  val path = "/home/mt/Downloads/KNMI_20181103.txt"
+  
+  val rawData = spark.read
+      .option("comment","#")
+      .csv(path)
+  val schema =
+    Seq(StructField("STN", DataTypes.StringType, true)) ++ 
+    Seq(StructField("Date", DataTypes.DateType, true)) ++
+    Seq.fill(38)(StructField("STN", DataTypes.StringType, true))
+     
+    Seq.fill(38)(DataTypes.DoubleType)
+  
+  rawData.show(false)
+  rawData.printSchema()        
+  
+    
+    
+    
+    
+    
+  }
+}
+
+class DT (private val spark: SparkSession) {
+  
+  ???
+ 
+}
+

@@ -1,0 +1,59 @@
+package org.grl.shallow
+import org.apache.spark.sql.{SparkSession, Dataset}
+import org.apache.spark.sql.types.StructType
+import org.apache.spark.sql.types.StructField
+import org.spark_project.dmg.pmml.DataType
+import org.apache.spark.sql.types.DataTypes
+import org.apache.spark.sql.types.DateType
+
+object DT {
+  def main(args: Array[String]):Unit = {
+    val spark = SparkSession.builder()
+      .appName("DecisionTree")
+      .master("local[*]")
+      .getOrCreate()
+  
+  import spark.implicits._
+  val path = "/home/mt/Downloads/KNMI_20181103.txt"
+  
+  val colNames = Seq(
+       "STN", "Date","DDVEC", "FHVEC", "FG",
+       "FHX", "FHXH", "FHN", "FHNH", "FXX",
+       "FXXH", "TG", "TN", "TNH", "TX",  
+       "TXH", "T10N", "T10NH", "SQ", "SP",
+       "Q", "DR", "RH", "RHX", "RHXH",
+       "PG", "PX", "PXH", "PN", "PNH",
+       "VVN", "VVNH", "VVX", "VVXH", "NG",
+       "UG", "UX", "UXH", "UN", "UNH", "EV24"
+      )
+      
+   val dailyCols = Seq(
+       "DDVEC", "FHVEC", "FG", "TG", "SQ",
+       "SP", "Q", "PG", "NG", "UG", "EV24", "RH"
+       )   
+      
+  val schema = StructType(
+    Seq(StructField(
+        "STN", DataTypes.StringType, true)) ++ 
+    Seq(StructField(
+        "Date", DataTypes.DateType, true)) ++
+    colNames.map(colName=>StructField(colName,DataTypes.StringType)))
+        
+    val rawData = spark.read
+      .option("comment","#")
+      .csv(path)
+      .toDF(colNames:_*)
+      .select(dailyCols.head, dailyCols.tail:_*)
+      
+    rawData.show
+    
+    
+  }
+}
+
+class DT (private val spark: SparkSession) {
+  
+  ???
+ 
+}
+

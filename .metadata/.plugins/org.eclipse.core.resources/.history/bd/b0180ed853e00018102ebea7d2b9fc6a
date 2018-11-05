@@ -1,0 +1,21 @@
+package org.grl.shallow
+
+object DT {
+  def main(args: Array[String]):Unit = {
+    
+    println("This is Decesion Tree project")
+    
+    
+    
+    
+  }
+}
+
+class(val private spark: SparkSession) DT {
+  
+  
+  
+  
+  
+}
+

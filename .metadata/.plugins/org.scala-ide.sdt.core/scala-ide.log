@@ -1,0 +1,457 @@
+2018-02-21 20:55:58,795 ERROR [main] - Statistics - Statistics file `/home/mt/.scalaide/statistics` is corrupted. A new one is being created. Corrupted content was:
+
+com.cedarsoftware.util.io.JsonIoException: error parsing JSON value
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:529)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:289)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:262)
+	at org.scalaide.core.internal.statistics.Statistics.read(Statistics.scala:74)
+	at org.scalaide.core.internal.statistics.Statistics.$anonfun$readStats$1(Statistics.scala:52)
+	at org.scalaide.core.internal.statistics.Statistics.$anonfun$readStats$1$adapted(Statistics.scala:51)
+	at org.scalaide.core.ScalaIdeDataStore$.$anonfun$validate$2(ScalaIdeDataStore.scala:59)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.core.ScalaIdeDataStore$.validate(ScalaIdeDataStore.scala:59)
+	at org.scalaide.core.internal.statistics.Statistics.readStats(Statistics.scala:51)
+	at org.scalaide.core.internal.statistics.Statistics.<init>(Statistics.scala:30)
+	at org.scalaide.core.internal.ScalaPlugin.stats$lzycompute(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.stats(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.statistics(ScalaPlugin.scala:138)
+	at org.scalaide.core.internal.ScalaPlugin.start(ScalaPlugin.scala:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:103)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.registry.PerspectiveDescriptor.createFactory(PerspectiveDescriptor.java:75)
+	at org.eclipse.ui.internal.WorkbenchPage.createPerspective(WorkbenchPage.java:4172)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:4081)
+	at org.eclipse.ui.internal.WorkbenchWindow.setup(WorkbenchWindow.java:744)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:91)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.inject(ContextInjectionFactory.java:73)
+	at org.eclipse.ui.internal.Workbench.createWorkbenchWindow(Workbench.java:1494)
+	at org.eclipse.ui.internal.Workbench.getActiveWorkbenchWindow(Workbench.java:1468)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.updateActiveShell(WorkbenchSourceProvider.java:907)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.getCurrentState(WorkbenchSourceProvider.java:115)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.lambda$2(WorkbenchSourceProvider.java:668)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1577)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1347)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1353)
+	at org.eclipse.swt.widgets.Shell.gtk_focus_in_event(Shell.java:1399)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1974)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6169)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5528)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9253)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1252)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2112)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4105)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: com.cedarsoftware.util.io.JsonIoException: EOF reached prematurely
+	at com.cedarsoftware.util.io.JsonParser.error(JsonParser.java:584)
+	at com.cedarsoftware.util.io.JsonParser.readValue(JsonParser.java:278)
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:521)
+	... 95 more
+2018-11-04 10:20:08,950 ERROR [main] - Statistics - Statistics file `/home/mt/.scalaide/statistics` is corrupted. A new one is being created. Corrupted content was:
+
+com.cedarsoftware.util.io.JsonIoException: error parsing JSON value
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:529)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:289)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:262)
+	at org.scalaide.core.internal.statistics.Statistics.read(Statistics.scala:74)
+	at org.scalaide.core.internal.statistics.Statistics.$anonfun$readStats$1(Statistics.scala:52)
+	at org.scalaide.core.internal.statistics.Statistics.$anonfun$readStats$1$adapted(Statistics.scala:51)
+	at org.scalaide.core.ScalaIdeDataStore$.$anonfun$validate$2(ScalaIdeDataStore.scala:59)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.core.ScalaIdeDataStore$.validate(ScalaIdeDataStore.scala:59)
+	at org.scalaide.core.internal.statistics.Statistics.readStats(Statistics.scala:51)
+	at org.scalaide.core.internal.statistics.Statistics.<init>(Statistics.scala:30)
+	at org.scalaide.core.internal.ScalaPlugin.stats$lzycompute(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.stats(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.statistics(ScalaPlugin.scala:138)
+	at org.scalaide.core.internal.ScalaPlugin.start(ScalaPlugin.scala:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:103)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.ui.filters.FilterDescriptor$1.run(FilterDescriptor.java:135)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.filters.FilterDescriptor.createViewerFilter(FilterDescriptor.java:139)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup$FilterItem.getFilterInstance(CustomFiltersActionGroup.java:187)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.updateViewerFilters(CustomFiltersActionGroup.java:517)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.<init>(CustomFiltersActionGroup.java:275)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.<init>(CustomFiltersActionGroup.java:241)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.<init>(PackageExplorerActionGroup.java:149)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart.makeActions(PackageExplorerPart.java:800)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart.createPartControl(PackageExplorerPart.java:506)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:151)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityView.createPartControl(CompatibilityView.java:147)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:546)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:530)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:70)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1293)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:79)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:704)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1076)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: com.cedarsoftware.util.io.JsonIoException: EOF reached prematurely
+	at com.cedarsoftware.util.io.JsonParser.error(JsonParser.java:584)
+	at com.cedarsoftware.util.io.JsonParser.readValue(JsonParser.java:278)
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:521)
+	... 152 more
+2018-11-04 10:37:14,106 ERROR [main] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob).
+2018-11-04 10:37:14,106 ERROR [main] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-11-04 10:39:36,150  WARN [main] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:39:36,151  WARN [main] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:39:36,457  WARN [main] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:39:36,458  WARN [main] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:39:36,988  WARN [Worker-7] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:39:37,001  WARN [Worker-7] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:40:00,773  WARN [Worker-7] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:40:00,773  WARN [Worker-7] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:41:22,991  WARN [Worker-12] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:41:22,991  WARN [Worker-12] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:41:23,140  WARN [Worker-12] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:41:23,145  WARN [Worker-12] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:41:23,975  WARN [Worker-12] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:41:23,975  WARN [Worker-12] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:43:14,085  WARN [Worker-12] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:43:14,085  WARN [Worker-12] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:43:14,742  WARN [Worker-12] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:43:14,742  WARN [Worker-12] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:44:30,453  WARN [Worker-11] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:44:30,453  WARN [Worker-11] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:44:31,244  WARN [Worker-11] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:44:31,244  WARN [Worker-11] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:45:01,826  WARN [Worker-2] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:45:01,826  WARN [Worker-2] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:45:02,627  WARN [Worker-2] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:45:02,628  WARN [Worker-2] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:45:52,529  WARN [main] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:45:52,530  WARN [main] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:46:06,935  WARN [Worker-9] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:46:06,935  WARN [Worker-9] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:46:07,298  WARN [Java indexing] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:46:07,298  WARN [Java indexing] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:46:11,199  WARN [Worker-9] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:46:11,199  WARN [Worker-9] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:46:12,747  WARN [Worker-7] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:46:12,747  WARN [Worker-7] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:46:15,364  WARN [Worker-7] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:46:15,364  WARN [Worker-7] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:46:17,161  WARN [Worker-13] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:46:17,161  WARN [Worker-13] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:46:17,810  WARN [Worker-13] - ScalaProject - Project shallow has platform default sourceLevel.
+2018-11-04 10:46:17,811  WARN [Worker-13] - ScalaProject - Project shallow runs on platform default installation.
+2018-11-04 10:49:00,114  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for shallow, setting default to 2.12.
+2018-11-04 10:56:53,734 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:56:53 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://repository.apache.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:56:53,736 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:56:53 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://repository.apache.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:56:53,976 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:56:53 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to http://repository.jboss.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:56:53,978 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:56:53 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to http://repository.jboss.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:56:57,053 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:56:57 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to http://files.couchbase.com/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:57:00,877 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:57:00 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://repository.apache.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:57:01,018 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:57:01 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to http://repository.jboss.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:57:06,701 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:57:06 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://repository.apache.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:57:06,705 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:57:06 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://oss.sonatype.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:57:06,706 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:57:06 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://repository.apache.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 10:57:06,710 ERROR [OkHttp ConnectionPool] - System.err - Nov 04, 2018 10:57:06 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://oss.sonatype.org/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+2018-11-04 15:12:22,066 ERROR [Worker-5] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2018-11-04 15:12:22,132 ERROR [Worker-5] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-11-04 15:12:28,613 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.InternalError: Malformed class name
+	at java.lang.Class.getSimpleName(Class.java:1330)
+	at java.lang.Class.isAnonymousClass(Class.java:1411)
+	at org.scalaide.core.internal.logging.log4j.Log4JFacade$Logger$.apply(Log4JFacade.scala:60)
+	at org.scalaide.core.internal.logging.log4j.Log4JFacade.getLogger(Log4JFacade.scala:68)
+	at org.scalaide.logging.HasLogger.logger(HasLogger.scala:19)
+	at org.scalaide.logging.HasLogger.logger$(HasLogger.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.logger$lzycompute(JUnit4TestClassesCollector.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.logger(JUnit4TestClassesCollector.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.getClassSafe(JUnit4TestClassesCollector.scala:82)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.RunWithAnnotationOpt$lzycompute(JUnit4TestClassesCollector.scala:74)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.RunWithAnnotationOpt(JUnit4TestClassesCollector.scala:74)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.hasRunWithAnnotation(JUnit4TestClassesCollector.scala:59)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.isTestClass(JUnit4TestClassesCollector.scala:57)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.$anonfun$isRunnableTestClass$1(JUnit4TestClassesCollector.scala:44)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:12)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:444)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+2018-11-04 15:12:28,619 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.InternalError: Malformed class name
+	at java.lang.Class.getSimpleName(Class.java:1330)
+	at java.lang.Class.isAnonymousClass(Class.java:1411)
+	at org.scalaide.core.internal.logging.log4j.Log4JFacade$Logger$.apply(Log4JFacade.scala:60)
+	at org.scalaide.core.internal.logging.log4j.Log4JFacade.getLogger(Log4JFacade.scala:68)
+	at org.scalaide.logging.HasLogger.logger(HasLogger.scala:19)
+	at org.scalaide.logging.HasLogger.logger$(HasLogger.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.logger$lzycompute(JUnit4TestClassesCollector.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.logger(JUnit4TestClassesCollector.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.getClassSafe(JUnit4TestClassesCollector.scala:82)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.RunWithAnnotationOpt$lzycompute(JUnit4TestClassesCollector.scala:74)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.RunWithAnnotationOpt(JUnit4TestClassesCollector.scala:74)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.hasRunWithAnnotation(JUnit4TestClassesCollector.scala:59)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.isTestClass(JUnit4TestClassesCollector.scala:57)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.$anonfun$isRunnableTestClass$1(JUnit4TestClassesCollector.scala:44)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:12)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:444)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+2018-11-04 15:13:32,470 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.InternalError: Malformed class name
+	at java.lang.Class.getSimpleName(Class.java:1330)
+	at java.lang.Class.isAnonymousClass(Class.java:1411)
+	at org.scalaide.core.internal.logging.log4j.Log4JFacade$Logger$.apply(Log4JFacade.scala:60)
+	at org.scalaide.core.internal.logging.log4j.Log4JFacade.getLogger(Log4JFacade.scala:68)
+	at org.scalaide.logging.HasLogger.logger(HasLogger.scala:19)
+	at org.scalaide.logging.HasLogger.logger$(HasLogger.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.logger$lzycompute(JUnit4TestClassesCollector.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.logger(JUnit4TestClassesCollector.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.getClassSafe(JUnit4TestClassesCollector.scala:82)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.RunWithAnnotationOpt$lzycompute(JUnit4TestClassesCollector.scala:74)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.RunWithAnnotationOpt(JUnit4TestClassesCollector.scala:74)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.hasRunWithAnnotation(JUnit4TestClassesCollector.scala:59)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.isTestClass(JUnit4TestClassesCollector.scala:57)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.$anonfun$isRunnableTestClass$1(JUnit4TestClassesCollector.scala:44)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:12)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:444)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+2018-11-04 15:13:32,474 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.InternalError: Malformed class name
+	at java.lang.Class.getSimpleName(Class.java:1330)
+	at java.lang.Class.isAnonymousClass(Class.java:1411)
+	at org.scalaide.core.internal.logging.log4j.Log4JFacade$Logger$.apply(Log4JFacade.scala:60)
+	at org.scalaide.core.internal.logging.log4j.Log4JFacade.getLogger(Log4JFacade.scala:68)
+	at org.scalaide.logging.HasLogger.logger(HasLogger.scala:19)
+	at org.scalaide.logging.HasLogger.logger$(HasLogger.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.logger$lzycompute(JUnit4TestClassesCollector.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.logger(JUnit4TestClassesCollector.scala:17)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.getClassSafe(JUnit4TestClassesCollector.scala:82)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.RunWithAnnotationOpt$lzycompute(JUnit4TestClassesCollector.scala:74)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector.RunWithAnnotationOpt(JUnit4TestClassesCollector.scala:74)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.hasRunWithAnnotation(JUnit4TestClassesCollector.scala:59)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.isTestClass(JUnit4TestClassesCollector.scala:57)
+	at org.scalaide.core.internal.launching.JUnit4TestClassesCollector$JUnit4TestClassesTraverser.$anonfun$isRunnableTestClass$1(JUnit4TestClassesCollector.scala:44)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:12)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:444)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+2018-11-04 15:14:19,852 ERROR [Worker-6] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2018-11-04 15:14:19,858 ERROR [Worker-6] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-11-04 16:06:29,896  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1343
+2018-11-04 16:06:30,421  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1343
+2018-11-04 16:06:32,476  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1247
+2018-11-04 17:51:58,042  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1471
+2018-11-04 17:52:03,229  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1475
+2018-11-04 18:41:50,665  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1493
+2018-11-04 18:41:54,383  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1493
+2018-11-04 18:41:55,451  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1496
+2018-11-04 18:43:25,601  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1497
+2018-11-04 18:43:27,131  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1500
+2018-11-04 18:43:29,164  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1502
+2018-11-04 18:52:32,351 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+scala.reflect.internal.FatalError: ThisType(method main) for sym which is not a class
+	at scala.reflect.internal.Reporting.abort(Reporting.scala:61)
+	at scala.reflect.internal.Reporting.abort$(Reporting.scala:57)
+	at scala.reflect.internal.SymbolTable.abort(SymbolTable.scala:16)
+	at scala.reflect.internal.Types$ThisType.<init>(Types.scala:1181)
+	at scala.reflect.internal.Types$UniqueThisType.<init>(Types.scala:1201)
+	at scala.reflect.internal.Types$ThisType$.apply(Types.scala:1205)
+	at scala.tools.nsc.interactive.Global.findMirrorSymbol(Global.scala:862)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$5$adapted(Global.scala:935)
+	at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:934)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:846)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+2018-11-04 19:08:31,185 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2018-11-04 19:08:31,185 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2018-11-04 19:08:31,185 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
